@@ -4,8 +4,11 @@ import android.util.Log;
 
 public class RingtonePlayer {
 
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
+    public Boolean playRingtone() {
+        return true;
+    }
+
+    public Boolean stopRingtone() {
+        return true;
     }
 }
