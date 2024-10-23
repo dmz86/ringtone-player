@@ -13,7 +13,7 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "RingtonePlayer.podspec"
+    "CapacitorCommunityRingtonePlayer.podspec"
   ],
   "author": "Marco Domiziani",
   "license": "MIT",
