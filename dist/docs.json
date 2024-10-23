@@ -1,0 +1,35 @@
+{
+  "api": {
+    "name": "RingtonePlayerPlugin",
+    "slug": "ringtoneplayerplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "playRingtone",
+        "signature": "() => Promise<{ result: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ result: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "playringtone"
+      },
+      {
+        "name": "stopRingtone",
+        "signature": "() => Promise<{ result: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ result: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stopringtone"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
