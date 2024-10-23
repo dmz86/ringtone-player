@@ -1,5 +1,5 @@
 {
-  "name": "ringtone-player",
+  "name": "@capacitor-community/ringtone-player",
   "version": "0.0.1",
   "description": "Play and stop system ringtone",
   "main": "dist/plugin.cjs.js",

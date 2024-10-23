@@ -1,4 +1,4 @@
-package com.epro.plugin.ringtone;
+package com.getcapacitor.community.ringtone;
 
 import android.util.Log;
 
