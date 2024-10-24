@@ -1,11 +1,11 @@
-# ringtone-player
+# ringtone-controller
 
 Play and stop system ringtone
 
 ## Install
 
 ```bash
-npm install ringtone-player
+npm install ringtone-controller
 npx cap sync
 ```
 
@@ -13,6 +13,7 @@ npx cap sync
 
 <docgen-index>
 
+* [`echo(...)`](#echo)
 * [`playRingtone()`](#playringtone)
 * [`stopRingtone()`](#stopringtone)
 
@@ -20,6 +21,21 @@ npx cap sync
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### echo(...)
+
+```typescript
+echo(options: { value: string; }) => Promise<{ value: string; }>
+```
+
+| Param         | Type                            |
+| ------------- | ------------------------------- |
+| **`options`** | <code>{ value: string; }</code> |
+
+**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
+--------------------
+
 
 ### playRingtone()
 

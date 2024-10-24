@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'capacitorRingtonePlayer',
+      name: 'capacitorRingotone',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },

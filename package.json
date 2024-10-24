@@ -1,5 +1,5 @@
 {
-  "name": "@capacitor-community/ringtone-player",
+  "name": "ringtone-controller",
   "version": "0.0.1",
   "description": "Play and stop system ringtone",
   "main": "dist/plugin.cjs.js",
@@ -13,16 +13,16 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "CapacitorCommunityRingtonePlayer.podspec"
+    "RingtoneController.podspec"
   ],
-  "author": "Marco Domiziani",
+  "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmz86/ringtone-player.git.git"
+    "url": "git+https://github.com/dmz86/ringtone-player.git"
   },
   "bugs": {
-    "url": "https://github.com/dmz86/ringtone-player.git/issues"
+    "url": "https://github.com/dmz86/ringtone-player/issues"
   },
   "keywords": [
     "capacitor",
@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild -scheme RingtonePlayer -destination generic/platform=iOS",
+    "verify:ios": "xcodebuild -scheme RingtoneController -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -39,7 +39,7 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api RingtonePlayerPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api RingotonePlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",

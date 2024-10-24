@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { RingtonePlayerPlugin } from './definitions';
+import type { RingotonePlugin } from './definitions';
 
-const RingtonePlayer = registerPlugin<RingtonePlayerPlugin>('RingtonePlayer', {
-  web: () => import('./web').then((m) => new m.RingtonePlayerWeb()),
+const Ringotone = registerPlugin<RingotonePlugin>('Ringotone', {
+  web: () => import('./web').then((m) => new m.RingotoneWeb()),
 });
 
 export * from './definitions';
-export { RingtonePlayer };
+export { Ringotone };

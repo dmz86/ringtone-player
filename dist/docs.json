@@ -1,10 +1,26 @@
 {
   "api": {
-    "name": "RingtonePlayerPlugin",
-    "slug": "ringtoneplayerplugin",
+    "name": "RingotonePlugin",
+    "slug": "ringotoneplugin",
     "docs": "",
     "tags": [],
     "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "Promise<{ value: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "echo"
+      },
       {
         "name": "playRingtone",
         "signature": "() => Promise<{ result: boolean; }>",

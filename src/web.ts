@@ -1,8 +1,13 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { RingtonePlayerPlugin } from './definitions';
+import type { RingotonePlugin } from './definitions';
 
-export class RingtonePlayerWeb extends WebPlugin implements RingtonePlayerPlugin {
+export class RingotoneWeb extends WebPlugin implements RingotonePlugin {
+  async echo(options: { value: string }): Promise<{ value: string }> {
+    console.log('ECHO', options);
+    return options;
+  }
+
   async playRingtone(): Promise<{ result: boolean }>{
     return { result: true }
   };

@@ -1,7 +1,7 @@
 import { registerPlugin } from '@capacitor/core';
-const RingtonePlayer = registerPlugin('RingtonePlayer', {
-    web: () => import('./web').then((m) => new m.RingtonePlayerWeb()),
+const Ringotone = registerPlugin('Ringotone', {
+    web: () => import('./web').then((m) => new m.RingotoneWeb()),
 });
 export * from './definitions';
-export { RingtonePlayer };
+export { Ringotone };
 //# sourceMappingURL=index.js.map

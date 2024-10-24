@@ -1,4 +1,4 @@
-import type { RingtonePlayerPlugin } from './definitions';
-declare const RingtonePlayer: RingtonePlayerPlugin;
+import type { RingotonePlugin } from './definitions';
+declare const Ringotone: RingotonePlugin;
 export * from './definitions';
-export { RingtonePlayer };
+export { Ringotone };

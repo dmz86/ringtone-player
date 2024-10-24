@@ -1,5 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
-export class RingtonePlayerWeb extends WebPlugin {
+export class RingotoneWeb extends WebPlugin {
+    async echo(options) {
+        console.log('ECHO', options);
+        return options;
+    }
     async playRingtone() {
         return { result: true };
     }

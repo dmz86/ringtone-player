@@ -1,11 +1,15 @@
-var capacitorRingtonePlayer = (function (exports, core) {
+var capacitorRingotone = (function (exports, core) {
     'use strict';
 
-    const RingtonePlayer = core.registerPlugin('RingtonePlayer', {
-        web: () => Promise.resolve().then(function () { return web; }).then((m) => new m.RingtonePlayerWeb()),
+    const Ringotone = core.registerPlugin('Ringotone', {
+        web: () => Promise.resolve().then(function () { return web; }).then((m) => new m.RingotoneWeb()),
     });
 
-    class RingtonePlayerWeb extends core.WebPlugin {
+    class RingotoneWeb extends core.WebPlugin {
+        async echo(options) {
+            console.log('ECHO', options);
+            return options;
+        }
         async playRingtone() {
             return { result: true };
         }
@@ -18,10 +22,10 @@ var capacitorRingtonePlayer = (function (exports, core) {
 
     var web = /*#__PURE__*/Object.freeze({
         __proto__: null,
-        RingtonePlayerWeb: RingtonePlayerWeb
+        RingotoneWeb: RingotoneWeb
     });
 
-    exports.RingtonePlayer = RingtonePlayer;
+    exports.Ringotone = Ringotone;
 
     return exports;
 

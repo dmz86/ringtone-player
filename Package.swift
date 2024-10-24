@@ -2,27 +2,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "RingtonePlayer",
+    name: "RingtoneController",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "RingtonePlayer",
-            targets: ["RingtonePlayerPlugin"])
+            name: "RingtoneController",
+            targets: ["RingotonePlugin"])
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "main")
     ],
     targets: [
         .target(
-            name: "RingtonePlayerPlugin",
+            name: "RingotonePlugin",
             dependencies: [
                 .product(name: "Capacitor", package: "capacitor-swift-pm"),
                 .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
-            path: "ios/Sources/RingtonePlayerPlugin"),
+            path: "ios/Sources/RingotonePlugin"),
         .testTarget(
-            name: "RingtonePlayerPluginTests",
-            dependencies: ["RingtonePlayerPlugin"],
-            path: "ios/Tests/RingtonePlayerPluginTests")
+            name: "RingotonePluginTests",
+            dependencies: ["RingotonePlugin"],
+            path: "ios/Tests/RingotonePluginTests")
     ]
 )
