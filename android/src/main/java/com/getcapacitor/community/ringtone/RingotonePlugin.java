@@ -16,8 +16,10 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 public class RingotonePlugin extends Plugin {
 
     private Ringotone implementation = new Ringotone();
+    public Ringtone currentRintone = null;
 
     String TAG = "RingotonePlugin";
+
 
     @PluginMethod
     public void echo(PluginCall call) {
@@ -36,10 +38,10 @@ public class RingotonePlugin extends Plugin {
 
             // Ottieni la suoneria di default del dispositivo
             Uri ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
-            Ringtone ringtone = RingtoneManager.getRingtone(context, ringtoneUri);
+            currentRintone = RingtoneManager.getRingtone(context, ringtoneUri);
 
             // Riproduci la suoneria
-            ringtone.play();
+            currentRintone.play();
 
             call.resolve();
         } catch (Exception e) {
@@ -48,20 +50,13 @@ public class RingotonePlugin extends Plugin {
     }
     @PluginMethod
     public void stopRingtone(PluginCall call) {
-        return;
-//        try {
-//            Context context = getContext();
-//
-//            // Ottieni la suoneria di default del dispositivo
-//            Uri ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
-//            Ringtone ringtone = RingtoneManager.getRingtone(context, ringtoneUri);
-//
-//            // Ferma la suoneria
-//            ringtone.stop();
-//
-//            call.resolve();
-//        } catch (Exception e) {
-//            call.reject("Errore nella riproduzione della suoneria", e);
-//        }
+        try {
+           if (currentRintone != null){
+               currentRintone.stop();
+           }
+           call.resolve();
+        } catch (Exception e) {
+            call.reject("Errore nella riproduzione della suoneria", e);
+        }
     }
 }
